@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>About Me</title>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+</style>
 </head>
 <body>
     <header>
@@ -27,10 +34,11 @@
         I enjoy learning new skills and building projects.
     </p>
 
-    <img src="https://images.squarespace-cdn.com/content/v1/657b302ad0d11e71b22b40c3/80395f24-f05d-49c6-98e8-9ff4a4e7d623/photo_954.jpg?format=1000w" alt="Aaryan Gangwar">
+    <img src="https://images.squarespace-cdn.com/content/v1/657b302ad0d11e71b22b40c3/80395f24-f05d-49c6-98e8-9ff4a4e7d623/photo_954.jpg?format=1000w" alt="Aaryan Gangwar" width="200">
 
 </section>
 <section id="skills">
+    <h2>My Skills</h2>
     <ul>
         <li>Coding</li>
         <li>Football</li>
@@ -44,9 +52,90 @@
     </ol>
 </section>
 
+<section id="timetable">
+    <h2>My Timetable</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Subject</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Mathematics</td>
+                <td>9:00 AM - 10:00 AM</td>
+            </tr>
+
+            <tr>
+                <td>Tuesday</td>
+                <td>Physics</td>
+                <td>10:00 AM - 11:00 AM</td>
+            </tr>
+
+            <tr>
+                <td>Wednesday</td>
+                <td>Programming in C</td>
+                <td>11:00 AM - 12:00 PM</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="3">
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
+        <label for="reason">Reason for contacting:</label>
+        <select id="reason" name="reason" required>
+            <option value="">Select a reason</option>
+            <option value="project">Project Discussion</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <p>Preferred contact method:</p>
+
+        <input type="radio" id="email-contact" name="contact-method" value="email" required>
+        <label for="email-contact">Email</label>
+
+        <input type="radio" id="phone-contact" name="contact-method" value="phone">
+        <label for="phone-contact">Phone</label>
+
+        <br><br>
+
+        <label for="message">Message:</label>
+        <br>
+        <textarea id="message" name="message" rows="5" cols="30" required minlength="10"></textarea>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</section>
+
 <a href="https://github.com/aaryangangwar" target="_blank">
     Visit My GitHub Profile
 </a>
+
 
 
 
